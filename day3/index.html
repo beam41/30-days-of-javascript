@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>day3</title>
+  </head>
+  <body>
+    <script>
+      const firstName = "P",
+        lastName = "L",
+        country = "Thai",
+        city = "CM",
+        age = 21,
+        isMarried = false,
+        year = 1;
+      console.log(
+        typeof firstName,
+        typeof lastName,
+        typeof country,
+        typeof city,
+        typeof age,
+        typeof isMarried,
+        typeof year
+      );
+      console.log(typeof "10" === 10);
+      console.log(parseInt("9.8") === 10);
+      console.log(1 === 1, [].length === 0, 1 + 1 === 2);
+      console.log([] === [], "1" === 1, "4" + "4" == 8);
+      // 4 > 3      true
+      // 4 >= 3     true
+      // 4 < 3      false
+      // 4 <= 3     false
+      // 4 == 4     true
+      // 4 === 4    true
+      // 4 != 4     false
+      // 4 !== 4    false
+      // 4 != '4'   false
+      // 4 == '4'   true
+      // 4 === '4'  false
+      // 'python'.length !== 'jargon'.length
+      console.log(
+        4 > 3,
+        4 >= 3,
+        4 < 3,
+        4 <= 3,
+        4 == 4,
+        4 === 4,
+        4 != 4,
+        4 !== 4,
+        4 != "4",
+        4 == "4",
+        4 === "4",
+        "python".length !== "jargon".length
+      );
+      // 4 > 3 && 10 < 12                               true
+      // 4 > 3 && 10 > 12                               false
+      // 4 > 3 || 10 < 12                               true
+      // 4 > 3 || 10 > 12                               true
+      // !(4 > 3)                                       false
+      // !(4 < 3)                                       true
+      // !(false)                                       true
+      // !(4 > 3 && 10 < 12)                            false
+      // !(4 > 3 && 10 > 12)                            true
+      // !(4 === '4')                                   true
+      // There is no 'on' in both dragon and python     false
+      console.log(
+        4 > 3 && 10 < 12,
+        4 > 3 && 10 > 12,
+        4 > 3 || 10 < 12,
+        4 > 3 || 10 > 12,
+        !(4 > 3),
+        !(4 < 3),
+        !false,
+        !(4 > 3 && 10 < 12),
+        !(4 > 3 && 10 > 12),
+        !(4 === "4"),
+        !"dragon".includes("on") && !"python".includes("on")
+      );
+      const time = new Date();
+      console.log(
+        time.getFullYear(),
+        time.getMonth() + 1,
+        time.getDate(),
+        time.getDay(),
+        time.getHours(),
+        time.getMinutes(),
+        time.getTime()
+      );
+
+      // l2 - 5
+      x1 = 2;
+      y1 = 2 * x1 - 2;
+      x2 = 1;
+      y2 = 2 * x2 - 2;
+      y0 = 2 * 0 - 2;
+      x0 = (0 + 2) / 2;
+      m5 = (y2 - y1) / (x2 - x1);
+      console.log("slope", m5);
+      console.log("x-intercept", x0);
+      console.log("y-intercept", y0);
+
+      // l2 - 6
+      m6 = (10 - 2) / (6 - 2);
+      console.log("slope 6", m6);
+
+      // l2 - 7
+      console.log("Compare slope", m6 - m5);
+
+      // l2 - 8
+      for (let x = -10; x <= 10; x++) {
+        if (x ** 2 + 6 * x + 9 === 0) {
+          console.log("Y = 0 at X =", x);
+        }
+      }
+
+      // l2 - 11
+      let firstName2 = "Asabeneh";
+      let lastName2 = "Yetayeh";
+      console.log(
+        "Your first name,",
+        firstName2,
+        "is",
+        firstName2.length > lastName2.length ? "longer" : "shorter",
+        "than your family name,",
+        lastName2
+      );
+      let myAge = 250;
+      let yourAge = 25;
+      console.log(
+        "I am",
+        Math.abs(myAge - yourAge),
+        "years",
+        myAge > yourAge ? "older" : "younger",
+        "than you."
+      );
+
+      // l2 - 15
+      y = time.getFullYear();
+      month = time.getMonth() + 1;
+      day = time.getDay();
+      hour = time.getHours();
+      min = time.getMinutes();
+      console.log(`${y}-${month}-${day} ${hour}:${min}`);
+      console.log(`${day}-${month}-${y} ${hour}:${min}`);
+      console.log(`${day}/${month}/${y} ${hour}:${min}`);
+
+      function padZero(num) {
+        return (num < 10 ? "0" : "") + num;
+      }
+
+      // l3
+      console.log(
+        `${y}-${padZero(month)}-${padZero(day)} ${padZero(hour)}:${padZero(
+          min
+        )}`
+      );
+    </script>
+  </body>
+</html>
